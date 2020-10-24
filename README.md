@@ -1,61 +1,74 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# TEST PROGRAMMER PT NINDYA KARYA (PERSERO)
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Aplikasi test programmer yang dibuat oleh Maherdika Erlambang menggunakan Laravel 8.11.2. Pastikan anda mengecek requirement aplikasi pada website [Dokumentasi Laravel](https://laravel.com/docs/8.x) untuk menginstall aplikasi. 
 
-## About Laravel
+# TUGAS PESERTA
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Tugas utama yang diberikan adalah menampilkan data dari tabel Barang dengan metode MVC (Model, View, Controller). Adapun tugas tersebut telah diselesaikan dan ditambahkan fitur CRUD (Create, Read, Update, Delete) untuk keperluan tabel Barang.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## INSTALASI
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Menggunakan package manager [composer](https://getcomposer.org/) untuk menginstall aplikasi.
 
-## Learning Laravel
+```bash
+composer install
+```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## PENGGUNAAN
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Copy file .env.example atau .env.maherdika untuk membuat setup .env pada server anda dengan perintah
 
-## Laravel Sponsors
+```bash
+cp .env.maherdika .env
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Atau anda dapat melakukan copy paste secara manual.
 
-### Premium Partners
+Generate key untuk .env dengan perintah
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+```bash
+php artisan key:generate
+```
 
-## Contributing
+Setup .env anda pada atribut
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```bash
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=praktek_nindya
+DB_USERNAME=root
+DB_PASSWORD=maherbro
+```
 
-## Code of Conduct
+Dapat disesuaikan dengan versi anda atau dapat mengikuti contoh diatas, namun pastikan DB_PASSWORD anda apakah diberi password atau tidak dan DB_USERNAME anda sesuai dengan username database anda.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Jalankan migration dengan perintah
 
-## Security Vulnerabilities
+```bash
+php artisan migrate
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Jalankan aplikasi dengan perintah
 
-## License
+```bash
+php artisan serve
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Aplikasi sudah dapat dibuka pada browser anda.
+
+## PANDUAN PENGGUNAAN
+
+* Setelah aplikasi terbuka pada browser silakan klik tombol GO TO APPLICATION.
+* Maka tampilan data masih kosong karena database belum berisikan data.
+* Silakan tambahkan data dengan Klik TAMBAH BARANG
+* Isikan Data Barang dan Simpan
+* Anda akan kembali ke halaman utama aplikasi.
+* Anda dapat mencoba fitur EDIT dan DELETE.
+
+## SCREENSHOOT APLIKASI
+
+![](screenshoot/1.png)
+![](screenshoot/2.png)
+![](screenshoot/3.png)
+![](screenshoot/4.png)
